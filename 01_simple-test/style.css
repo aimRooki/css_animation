@@ -1,12 +1,22 @@
 @charset "UTF-8";
 
-.box {
-    width: 100px;
-    height: 100px;
-    background: #000;
-  }
-  
-  .box:hover {
-    background: #ccc;
-    width: 300px;
-  }
+.box,
+.box2,
+.box3 {
+  width: 100px;
+  height: 100px;
+  background: #000;
+}
+.box2,
+.box3 {
+  transition: all 300ms 0s ease;
+}
+.box:hover,
+.box2:hover {
+  background: #ccc;
+  width: 300px;
+}
+.active {
+  transform: translateX(300px);
+  background: #ff0000;
+}
