@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+body {margin: 10px;}
+
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #000;
+}
+.b1.active {
+  animation: rotation 2s ease 0s 1 alternate none running;
+  /* 
+  animation-name: rotation; アニメーションの名前
+  animation-duration: 2s;　アニメーションの時間
+  animation-timing-function: ease;　アニメーションの加速度
+  animation-delay: 0s;　アニメーションが開始するまでの時間
+  animation-iteration-count: 1;　アニメーションが繰り返す回数
+  animation-direction: alternate;　アニメーションの再生方向（順番・逆再生）
+  animation-fill-mode: none; アニメーション開始と終了時のスタイルの状態
+  animation-play-state: running; アニメーションの再生・停止
+  */
+}
+
+@keyframes rotation {
+  0% {
+    transform: scale(.3);
+  }
+  50% {
+    transform: scale(.6) rotate(-45deg);
+    background: red;
+  }
+  100% {
+    transform: scale(1) rotate(180deg);
+    background: blue;
+  }  
+}
